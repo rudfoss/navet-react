@@ -1,9 +1,14 @@
+import { useState } from "react"
+
 import logo from './logo.svg';
 import './App.css';
 import HelloWorld from "./HelloWorld"
 import Input from "./Input"
 
 function App() {
+	const [value, setValue] = useState("")
+	const [greeting, setGreeting] = useState("")
+
   return (
     <div className="App">
       <header className="App-header">
@@ -11,8 +16,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Input />
-        <HelloWorld name="Thomas" />
+        <Input value={value} onChange={setValue} label="Name" />
+        <Input value={greeting} onChange={setGreeting} label="Greeting" />
+        <HelloWorld name={value} />
         <a
           className="App-link"
           href="https://reactjs.org"

@@ -1,18 +1,14 @@
-import { useState } from "react"
-
 import classes from "./Input.module.css"
 
-function Input() {
-	const [value, setValue] = useState("")
-
+function Input(props) {
 	function onInputChange(evt) {
-		setValue(evt.target.value)
+		props.onChange(evt.target.value)
 	}
 
 	return (
 		<div className={classes.container}>
-			<label htmlFor="input-text">Input your name: {value}</label>
-			<input id="input-text" type="text" value={value} onChange={onInputChange}/>
+			<label htmlFor="input-text">{props.label}</label>
+			<input id="input-text" type="text" value={props.value} onChange={onInputChange}/>
 		</div>
 	)
 }
