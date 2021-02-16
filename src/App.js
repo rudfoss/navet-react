@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import HelloWorld from "./HelloWorld"
+import Input from "./Input"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Input />
         <HelloWorld name="Thomas" />
         <a
           className="App-link"
