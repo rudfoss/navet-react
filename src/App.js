@@ -5,6 +5,7 @@ import './App.css';
 import HelloWorld from "./HelloWorld"
 import Input from "./Input"
 import Loops from "./Loops"
+import AsyncData from "./AsyncData"
 
 function App() {
 	const [value, setValue] = useState("")
@@ -25,6 +26,8 @@ function App() {
         >
           Learn React
         </a>
+
+        <AsyncData />
       </header>
     </div>
   );
