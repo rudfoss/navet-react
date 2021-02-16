@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import HelloWorld from "./HelloWorld"
 import Input from "./Input"
+import Loops from "./Loops"
 
 function App() {
 	const [value, setValue] = useState("")
@@ -12,10 +13,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Loops />
         <Input value={value} onChange={setValue} label="Name" />
         <Input value={greeting} onChange={setGreeting} label="Greeting" />
         <HelloWorld name={value} />
